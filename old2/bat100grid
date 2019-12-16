@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for v in {1..100}
+do
+    mkdir "../results/posterrun$v"
+    python grid.py "posterrun$v"
+    wait
+done
