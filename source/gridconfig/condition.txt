@@ -1,0 +1,8 @@
+res.params.data_description[::-1].startswith("1")
+#np.mean(np.sort(res.d_values["testingZ_S"][:16])) > np.mean(np.sort(res.d_values["testingZ_E"][:16]))
+res.params.st2["memory"]["smoothing_percentile"] == 80
+#res.params.st2['memory']['depress_params']['cost'] == 400
+#res.params.st2['memory']['depress_params']['recovery_time_constant'] == 400
+#res.params.st2["input_noise"] == 0
+#res.params.st2["sfa2_noise"] == 0.05
+#np.mean(np.sort(res.d_values["testingY"][:16])) > np.mean(np.sort(res.d_values["testingZ_S"][:16]))

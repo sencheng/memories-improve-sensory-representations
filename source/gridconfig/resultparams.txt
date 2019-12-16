@@ -1,0 +1,12 @@
+# movement type, params, len and bgr get zipped tuple-wise
+#st2['movement_type'] = ['gaussian_walk', 'gaussian_walk', 'gaussian_walk', 'random_walk', 'random_walk', 'random_walk', 'random_stroll', 'random_stroll', 'random_stroll']
+#st2['movement_params'] = [dict(dx=0.05, dt=0.05, step=2), dict(dx=0.05, dt=0.05, step=5), dict(dx=0.05, dt=0.05, step=10),
+#                          dict(dx=0.05, dt=0.05, step=2), dict(dx=0.05, dt=0.05, step=5), dict(dx=0.05, dt=0.05, step=10),
+#                          dict(d2x=0.005, d2t=0.009, dx_max=0.05, dt_max=0.1, step=2),
+#                          dict(d2x=0.005, d2t = 0.009, dx_max=0.05, dt_max=0.1, step=5), dict(d2x=0.005, d2t = 0.009, dx_max=0.05, dt_max=0.1, step=10)]
+
+st2['movement_type'] = 'gaussian_walk'
+st2['movement_params'] = dict(dx=0.05, dt=0.05, step=5)
+
+#st2['memory']['category_weight'] = [0, 400]
+#st2['memory']['retrieval_noise'] = [0, 0.2, 0.5]
