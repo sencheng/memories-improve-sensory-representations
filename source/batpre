@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SNAME=$1
+PARA=$2
+PARB=$3
+PARC=$4
+
+srun -o ../out/pre.out.%j python $SNAME $PARA $PARB $PARC &
+wait

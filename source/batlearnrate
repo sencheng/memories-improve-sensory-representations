@@ -1,0 +1,12 @@
+#!/bin/bash
+
+SNAME=$1
+PARA=$2
+PARB=$3
+PARC=$4
+PARD=$5
+PARE=$6
+PARF=$7
+
+srun -o ../out/learnrate.out.%j python $SNAME $PARA $PARB $PARC $PARD $PARE $PARF &
+wait
