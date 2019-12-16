@@ -1,0 +1,24 @@
+#!/bin/bash
+
+    cd ..
+
+    for i in `seq 2 16`;
+    do
+        cp -r source source$i
+    done
+
+    cd results
+    for j in a b c d e f g h i j k l m n o p; do
+        mkdir reorder_replay_$j
+        done
+
+    cd ../source
+    python grid.py reorder_replay_a
+
+    let_arr=(a b c d e f g h i j k l m n o p)
+    for i in `seq 2 16`;
+    do
+        cd ../source$i
+        python grid.py reorder_replay_${let_arr[i-1]}
+    done
+cd ..

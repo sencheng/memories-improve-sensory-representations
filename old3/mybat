@@ -1,0 +1,23 @@
+#!/bin/bash
+
+    cd ..
+
+    for i in `seq 2 8`;
+    do
+        cp -r source source$i
+    done
+
+    cd results
+    for j in a b c d e f g h; do
+        mkdir reorder_norep$j
+        done
+
+    cd ../source
+    python grid.py reorder_norepa
+
+    let_arr=(a b c d e f g h)
+    for i in `seq 2 8`;
+    do
+        cd ../source$i
+        python grid.py reorder_norep${let_arr[i-1]}
+    done

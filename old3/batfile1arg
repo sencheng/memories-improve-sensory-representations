@@ -1,0 +1,7 @@
+#!/bin/bash
+
+SNAME=$1
+PARA=$2
+
+srun -o ../out/${SNAME}.out.%j python $SNAME $PARA &
+wait

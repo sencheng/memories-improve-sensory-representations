@@ -1,0 +1,23 @@
+#!/bin/bash
+
+    cd ..
+
+    for i in `seq 2 16`;
+    do
+        cp -r source source$i
+    done
+
+    cd results
+    for j in a b c d e f g h i j k l m n o p; do
+        mkdir morevsrepeat$j
+        done
+
+    cd ../source
+    sbatch batfile1arg morevsrepeat.py morevsrepeata
+
+    let_arr=(a b c d e f g h i j k l m n o p)
+    for i in `seq 2 16`;
+    do
+        cd ../source$i
+        sbatch batfile1arg morevsrepeat.py morevsrepeat${let_arr[i-1]}
+    done

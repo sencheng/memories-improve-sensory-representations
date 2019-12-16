@@ -1,0 +1,25 @@
+#!/bin/bash
+
+    NOISE=$1
+
+    cd ..
+
+    for i in `seq 2 16`;
+    do
+        cp -r sourceN sourceN$i
+    done
+
+    cd results
+    for j in a b c d e f g h i j k l m n o p; do
+        mkdir reorder_o18N$NOISE$j
+        done
+
+    cd ../sourceN
+    python grid.py reorder_o18N${NOISE}a
+
+    let_arr=(a b c d e f g h i j k l m n o p)
+    for i in `seq 2 16`;
+    do
+        cd ../sourceN$i
+        python grid.py reorder_o18N$NOISE${let_arr[i-1]}
+    done
